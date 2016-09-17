@@ -1,2 +1,9 @@
 # DevOps
-This repository contains useful devops scripts. Azure folder contains scripts for different tasks on Azure platform.
+This repository contains useful devops scripts.
+
+##Structure
+
+    |
+    |--- Azure (contains scripts for Azure platform)
+    |
+    |--- AWS (coming soon)
