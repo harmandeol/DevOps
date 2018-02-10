@@ -1,5 +1,5 @@
 $ErrorActionPreference = 'Stop';
-. "$PSScriptRoot\Get-Configuration.ps1"
+. "$PSScriptRoot\..\Get-Configuration.ps1"
 function Send-HtmlEmail {
     [CmdletBinding()]
     param
@@ -23,13 +23,13 @@ function Send-HtmlEmail {
     $Configuration = Get-Configuration
 
     if($Data -ne $Null){
-        $Data.PSObject.Properties | foreach {
+        $Data.PSObject.Properties | ForEach-Object {
             $Name = $_.Name
             $Html = $Html -Replace "{{$Name}}", $_.Value
         }
     }
 
-    $Configuration.PSObject.Properties | foreach {
+    $Configuration.PSObject.Properties | ForEach-Object {
         $Name = $_.Name
         $Html = $Html -Replace "{{$Name}}", $_.Value
     }

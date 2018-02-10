@@ -13,7 +13,7 @@ function Create-AADUsers {
 
     $usersList  =   Import-Csv $CsvFilePath
 
-    $usersList | foreach {
+    $usersList | ForEach-Object {
         $User = Get-MsolUser -UserPrincipalName $_.Email -ErrorAction SilentlyContinue
         if($User -eq $Null) {
             Write-Host "Creating User n Azure AD: $_"

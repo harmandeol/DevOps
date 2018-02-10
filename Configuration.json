@@ -1,7 +1,10 @@
 {
-    "Smtp":{
-        "Server": "127.0.0.1",
-        "From": "service desk <mycompany@somewhere.com.au>"
-    },
-    "CompanyAddress": "mycompany @ somewhere"
+  "Smtp": {
+    "Server": "127.0.0.1",
+    "From": "service desk <mycompany@somewhere.com.au>"
+  },
+  "CompanyAddress": "mycompany @ somewhere",
+  "AzureBlobStorageConnection": "UseDevelopmentStorage=true",
+  "ContainerName": "migrationfiles",
+  "DefaultConnection": "Server=.;User Id=sqluser;Password=sqluser;Database=cce2;Trusted_Connection=False;"
 }
